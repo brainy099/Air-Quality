@@ -13,7 +13,7 @@ const useStyles = makeStyles((theme) => ({
     height: "100%",
   },
   polBox: {
-    height: "40vh",
+    height: "20vh",
   },
 }));
 
@@ -22,26 +22,26 @@ const Dashboard = () => {
   return (
     <Grid className={classes.gridContainer} container spacing={2}>
       <Grid item xs={3}>
-        <Paper className={classes.pm25}></Paper>
+        <Paper className={classes.pm25}>PM 2.5</Paper>
       </Grid>
       <Grid item container spacing={2} xs={9}>
         <Grid item xs={4}>
-          <Paper className={classes.polBox}></Paper>
+          <Paper className={classes.polBox}>PM 10</Paper>
         </Grid>
         <Grid item xs={4}>
-          <Paper className={classes.polBox}></Paper>
+          <Paper className={classes.polBox}>OZONE</Paper>
         </Grid>
         <Grid item xs={4}>
-          <Paper className={classes.polBox}></Paper>
+          <Paper className={classes.polBox}>CO</Paper>
         </Grid>
         <Grid item xs={4}>
-          <Paper className={classes.polBox}></Paper>
+          <Paper className={classes.polBox}>SO2</Paper>
         </Grid>
         <Grid item xs={4}>
-          <Paper className={classes.polBox}></Paper>
+          <Paper className={classes.polBox}>NH3</Paper>
         </Grid>
         <Grid item xs={4}>
-          <Paper className={classes.polBox}></Paper>
+          <Paper className={classes.polBox}>NO2</Paper>
         </Grid>
       </Grid>
     </Grid>
