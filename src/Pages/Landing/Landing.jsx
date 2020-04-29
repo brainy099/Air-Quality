@@ -1,5 +1,4 @@
 import React from "react";
-import Navbar from "../../Components/Navbar/Navbar";
 import SearchPaper from "../../Components/SearchPaper/SearchPaper";
 import MapComponent from "../../Components/MapComponent/MapComponent";
 import Container from "@material-ui/core/Container";
@@ -15,7 +14,6 @@ const Landing = () => {
   const classes = useStyles();
   return (
     <React.Fragment>
-      <Navbar />
       <Container className={classes.container} maxWidth="lg">
         <Grid direction="row-reverse" container spacing={3}>
           <MapComponent />

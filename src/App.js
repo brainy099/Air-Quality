@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 
 import Landing from "./Pages/Landing/Landing";
 import Dashboard from "./Pages/Dashboard/Dashboard";
+import Navbar from "./Components/Navbar/Navbar";
+import { Route, Switch, Redirect } from "react-router-dom";
 import "./App.css";
 
 function App() {
@@ -18,7 +20,15 @@ function App() {
     };
     fetchFunc();
   }, []);
-  return <Landing />;
+  return (
+    <React.Fragment>
+      <Navbar />
+      <Switch>
+        <Route exact path="/" component={Landing} />
+        <Route exact path="/dashboard" component={Dashboard} />
+      </Switch>
+    </React.Fragment>
+  );
 }
 
 export default App;
