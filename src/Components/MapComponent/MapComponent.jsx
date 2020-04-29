@@ -1,5 +1,5 @@
 import React from "react";
-import Paper from "@material-ui/core/Paper";
+import Box from "@material-ui/core/Box";
 import Grid from "@material-ui/core/Grid";
 import India from "@svg-maps/india";
 import { SVGMap } from "react-svg-map";
@@ -7,7 +7,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import "react-svg-map/lib/index.css";
 
 const useStyles = makeStyles((theme) => ({
-  mapPaper: {
+  mapComponent: {
     display: "flex",
     margin: "5vh",
     padding: "5vh",
@@ -15,15 +15,15 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const MapPaper = () => {
+const MapComponent = () => {
   const classes = useStyles();
   return (
-    <Grid item xs={6}>
-      <Paper className={classes.mapPaper}>
-        <SVGMap map={India} />
-      </Paper>
+    <Grid item xs={12} md={6}>
+      <Box className={classes.mapComponent}>
+        <SVGMap onLocationClick={(e) => console.log(e.target)} map={India} />
+      </Box>
     </Grid>
   );
 };
 
-export default MapPaper;
+export default MapComponent;
